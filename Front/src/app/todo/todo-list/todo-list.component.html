@@ -1,0 +1,31 @@
+<ng-template #annuler>
+  <app-todo-block
+    *ngFor="let todo of todos"
+    [todo]="todo">
+  </app-todo-block>
+</ng-template>
+
+
+
+<ng-container *ngIf="modeCreation==='Create' then annuler else create">
+
+
+</ng-container>
+
+<ng-template #create>
+  <form (ngSubmit)="createTodo()">
+    <label for="id">Id : </label><input [(ngModel)]="todo.id" id="id" name="id">
+    <label for="nom">Nom :</label><input [(ngModel)]="todo.nom" id="nom" name="nom">
+    <label for="statut">Statut :</label>
+
+    <select [(ngModel)]="todo.statut" id="statut" name="statut">
+      <option *ngFor="let statut of statuts">{{ statut }}</option>
+    </select>
+    <br>
+    <label for="contenu">Contenu :</label><input [(ngModel)]="todo.contenu" id="contenu" name="contenu">
+    <label for="date_creation">Date création :</label><input type="datetime-local"  [(ngModel)]="todo.date_creation " id="date_creation" name="date_creation" value="{{date}}">
+    <button type="submit" (click)="createTodo()">Enregistrer</button><button type="reset">Reset</button>
+  </form>
+</ng-template>
+
+<button type="button" (click)="changeModeCreate()">{{modeCreation}}</button>

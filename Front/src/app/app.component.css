@@ -1,0 +1,19 @@
+nav {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+a {
+  font-family: 'Verdana', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ff5500;
+}

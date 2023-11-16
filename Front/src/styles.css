@@ -1,0 +1,9 @@
+body {
+    background-color: #e0e5f1; /* Couleur de fond de la page */
+   font-family: 'Verdana', sans-serif; /* Police de caractères par défaut */
+   margin: 0; /* Supprimer les marges par défaut du body */
+   padding: 0; /* Supprimer les espaces de remplissage par défaut du body */
+}
+
+/* Ajoutez d'autres styles de votre choix pour personnaliser davantage la mise en page de votre page. */
+

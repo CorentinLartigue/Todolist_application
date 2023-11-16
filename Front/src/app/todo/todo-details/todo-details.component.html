@@ -1,0 +1,33 @@
+<ng-container *ngIf="mode==='Edit' then annuler else edit"></ng-container>
+
+<button type="button" (click)="changeMode()">{{mode}}</button>
+
+<ng-template #annuler>
+  <p>Id : {{todo.id}}</p>
+  <p>Nom : {{todo.nom}}</p>
+  <p>Statut : {{todo.statut}}</p>
+  <p>Contenu : {{todo.contenu}}</p>
+  <p>Date création : {{todo.date_creation}}</p>
+  <button type="button" (click)="deleteTodo()">Supprimer</button>
+</ng-template>
+
+<ng-template #edit>
+  <form (ngSubmit)="updateTodo()">
+    <label for="id">Id : </label><input [(ngModel)]="todo.id" id="id" name="id">
+    <label for="nom">Nom :</label><input [(ngModel)]="todo.nom" id="nom" name="nom">
+    <label for="statut">Statut :</label>
+
+    <select [(ngModel)]="todo.statut" id="statut" name="statut">
+      <option *ngFor="let statut of statuts">{{ statut }}</option>
+    </select>
+    <br>
+    <label for="contenu">Contenu :</label><input [(ngModel)]="todo.contenu" id="contenu" name="contenu">
+    <label for="date_creation">Date création :</label><input [(ngModel)]="todo.date_creation" id="date_creation" name="date_creation">
+    <button type="submit" (click)="updateTodo()">Enregistrer</button><button type="reset">Reset</button>
+  </form>
+</ng-template>
+
+
+
+
+

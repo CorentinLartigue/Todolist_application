@@ -1,0 +1,37 @@
+.todo {
+  background-color: #333;
+  border: 1px solid ;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  height: 150px;
+  margin-bottom: 20px;
+  margin-right: 100px;
+}
+
+.todo:hover {
+  background-color: #ff5500;
+}
+
+
+.name {
+  font-weight: bold;
+}
+
+
+span {
+  font-size: 18px;
+  margin-right: 10px;
+  font-family: 'Verdana', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  transition: color 0.3s ease-in-out;
+  display: block;
+}
+
+
+.clear {
+  clear: both;
+}
