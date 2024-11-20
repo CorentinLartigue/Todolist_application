@@ -1,0 +1,44 @@
+# Frontend : Angular
+# Ignorer le dossier des modules Node.js
+node_modules/
+
+# Ignorer les fichiers générés par Angular CLI
+/dist/
+.tmp/
+
+# Ignorer les fichiers de configuration d'IDE (IntelliJ, VSCode, etc.)
+.vscode/
+.idea/
+
+# Fichiers de log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Back-end : Spring Boot (Java)
+# Ignorer les fichiers générés par Maven/Gradle
+/.mvn/
+/target/
+
+# Ignorer les fichiers de configuration d'IDE (IntelliJ, Eclipse)
+/.idea/
+/*.iml
+/.project
+/.classpath
+
+# Ignorer les fichiers générés lors de l'exécution de Spring Boot (logs, etc.)
+logs/
+*.log
+
+# Ignorer les fichiers temporaires créés par Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignorer les fichiers système (macOS, Windows, etc.)
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires générés par l'éditeur
+*.swp
